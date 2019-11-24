@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonApp", "PokemonApp\PokemonApp.csproj", "{6566B243-1A59-4FA3-9967-123817E43948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonAppAPI", "PokemonAppAPI\PokemonAppAPI.csproj", "{9738A543-96C1-4ABC-80B1-25EB589F0015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiTester", "PokeApiTester\PokeApiTester.csproj", "{73BA1F6E-E4E5-4CD4-BF2F-E991CBBD11A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6566B243-1A59-4FA3-9967-123817E43948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6566B243-1A59-4FA3-9967-123817E43948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6566B243-1A59-4FA3-9967-123817E43948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6566B243-1A59-4FA3-9967-123817E43948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9738A543-96C1-4ABC-80B1-25EB589F0015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9738A543-96C1-4ABC-80B1-25EB589F0015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9738A543-96C1-4ABC-80B1-25EB589F0015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9738A543-96C1-4ABC-80B1-25EB589F0015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73BA1F6E-E4E5-4CD4-BF2F-E991CBBD11A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73BA1F6E-E4E5-4CD4-BF2F-E991CBBD11A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73BA1F6E-E4E5-4CD4-BF2F-E991CBBD11A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73BA1F6E-E4E5-4CD4-BF2F-E991CBBD11A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D24A375-54DD-4599-B7FD-2BED9324C995}
+	EndGlobalSection
+EndGlobal

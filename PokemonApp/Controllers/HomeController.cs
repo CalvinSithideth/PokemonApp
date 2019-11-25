@@ -11,10 +11,29 @@ namespace PokemonApp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            //PokemonClient client = new PokemonClient();
-            //PokemonResponse data = client.GetPokemonByIdOrName(1, null);
+            // If no PokemonID is passed in,
+            // default to the first pokemon
+            int pokemonId = id ?? 1;
+            PokemonClient client = new PokemonClient();
+            PokemonResponse response = await client.GetPokemonAsync(pokemonId);
+
+            var pokemon = new SinglePokedexEntry
+            {
+                PokedexId = response.id,
+                Weight = response.weight,
+                Height = response.height,
+                ProfileImageUrl = response.sprites.front_default,
+                Name = response.name,
+                //Abilities = new List<Ability>(response.abilities)
+                Abilities = new List<string>()
+            };
+            foreach (var currAbility in response.abilities)
+            {
+                pokemon.Abilities.Add(currAbility.ability.name);
+            }
+
             return View();
         }
 

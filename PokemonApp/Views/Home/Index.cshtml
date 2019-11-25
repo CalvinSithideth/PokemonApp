@@ -1,8 +1,31 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model SinglePokedexEntry
+@{
+    ViewData["Title"] = $"{Model.PokedexId} : {Model.Name}";
+    int prevId = Model.PokedexId - 1;
+    int nextId = Model.PokedexId + 1;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<img src="@Model.ProfileImageUrl" />
+
+<h1>@Model.PokedexId : @Model.Name</h1>
+<p>Weight: @Model.Weight</p>
+<p>Height : @UnitConversionHelper.DecimetersToFeetAndInches(Model.Height)</p>
+
+@if (Model.Abilities != null
+  && Model.Abilities.Count != 0)
+{
+    <h2>Abilities</h2>
+    <ul>
+        @foreach (string ability in Model.Abilities)
+        {
+            <li>@ability</li>
+        }
+    </ul>
+}
+else
+{
+    <p>This pokemon does not have any abilities</p>
+}
+<br />
+<button><a asp-action="Index" asp-route-id="@nextId">Next</a></button>
+<button>Go to @nextId</button>

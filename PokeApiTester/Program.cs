@@ -9,7 +9,7 @@ namespace PokeApiTester
         static async Task Main(string[] args)
         {
             PokemonClient client = new PokemonClient();
-            PokemonResponse result = await client.GetPokemon(1);
+            PokemonResponse result = await client.GetPokemonAsync(1);
 
             Console.WriteLine($"Name: {result.name}");
             Console.WriteLine($"Weight: {result.weight}");

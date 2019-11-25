@@ -21,7 +21,7 @@ namespace PokemonAppAPI
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<PokemonResponse> GetPokemon(int id)
+        public async Task<PokemonResponse> GetPokemonAsync(int id)
         {
             return await GetPokemon(id.ToString());
         }
